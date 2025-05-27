@@ -1,6 +1,6 @@
 import React from "react";
 function FixedDepositComponent(){
-    const fixedDeposists=[
+    const fixedDeposits=[
         {id:1,duration:"1 Year",amount:10000},
         {id:2,duration:"2 Years",amount:20000},
         {id:3,duration:"3 Years",amount:20000},
@@ -8,7 +8,7 @@ function FixedDepositComponent(){
     ];
     return (
         <div>
-            <h1 data-testid="fixed-deposit-heading">Fixed Deposit Details </h1>
+            <h1 data-testid="fixed-deposit-heading">Fixed Deposit Details</h1>
             <table data-testid="fixed-deposit-table" border="1">
                 <thead>
                     <tr>
