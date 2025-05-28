@@ -6,7 +6,7 @@ function App(){
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Home/>}/>
+                <Home/>
                 <Route path="/manager/accounts" element={<ViewAllAccountsComponent/>}/>
             </Routes>
         </Router>

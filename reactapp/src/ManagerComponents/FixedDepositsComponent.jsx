@@ -1,20 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 function FixedDepositComponent(){
-    const fixedDeposits=[
-        {id:1,duration:"1 Year",amount:10000},
-        {id:2,duration:"2 Years",amount:20000},
-        {id:3,duration:"3 Years",amount:20000},
+    const [fixedDeposits, setFixedDeposits]=useState([]);
+    const[error,setError]=useState(null);
+    useEffect(()=>{
+        fetch("/api/fixed-deposits")
+        .then((res)=>{
+            if(!res.ok)throw new Error("Failed to fetch");
+            return res.json();
+        })
+        .then((data)=> setFixedDeposits(data))
+        .catch((err)=>{
+            setError("Error fetching fixed deposits.");
+            console.error(err);
+        });
+    },[]);
+    } return (
+
         
-    ];
-    return (
         <div>
-            <h1 data-testid="fixed-deposit-heading">Your Fixed Deposits</h1>
+          
+            <h1 data-testid="fixed-deposit-heading">All Accounts</h1>
+            {error && <p data-testid="error-message">{error}</p>}
+
             <table data-testid="fixed-deposit-table" border="1">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Duration</th>
-                        <th>Amount</th>
+                        <th>FD ID</th>
+                        <th>Account ID</th>
+                        <th>Principal Amount</th>
+                        <th>Interest Rate</th>
+                        <th>Tenure</th>
+                        <th>Maturity Amount</th>
+                        <th>Status</th>
+                        <th>Date Created</th>
+                        <th>Date Closed</th>
+                        <th>Actions</th>
+                    
 
                     </tr>
                 </thead>
@@ -22,14 +44,22 @@ function FixedDepositComponent(){
                     {fixedDeposits.map((fd)=>(
                         <tr key={fd.id}>
                             <td>{fd.id}</td>
-                            <td>{fd.duration}</td>
-                            <td>{fd.amount}</td>
+                            <td>{fd.accountId}</td>
+                            <td>{fd.principal}</td>
+                            <td>{fd.interestRate}</td>
+                            <td>{fd.tenure}</td>
+                            <td>{fd.maturityAmount}</td>
+                            <td>{fd.status}</td>
+
+                            <td>{fd.dateCreated}</td>
+                            <td>{fd.dateClosed}</td>
+                            <td>
+                                {/*Action buttons or popup triggers go here */}
+                            </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
         </div>
-    );
-}
-
+    );                
 export default FixedDepositComponent;

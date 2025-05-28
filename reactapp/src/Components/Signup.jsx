@@ -36,7 +36,7 @@ function Signup(){
         if(!formData.password) errs.password='Password is required';
         else if (formData.password.length<6)errs.password='Password must be atleast 6 characters';
         if(!formData.confirmPassword) errs.confirmPassword='Confirm Password is required';
-        else if (formData.password!==formData.confirmPassword)errs.confirmPassword='Passwords do not match';
+        else if (formData.password!==formData.confirmPassword)errs.confirmPassword='Something went wrong, Please try with different data';
 
         if(!formData.role)errs.role='Role is required';
         
@@ -55,7 +55,7 @@ function Signup(){
             });
             navigate('/login');
         }catch(err){
-            alert('Something went wrong. Please try with different data');
+            alert('Something went wrong, Please try with different data');
         }
     };
     return (

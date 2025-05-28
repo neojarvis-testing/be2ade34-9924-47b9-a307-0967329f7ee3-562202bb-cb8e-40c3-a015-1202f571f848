@@ -8,7 +8,7 @@ function FixedDepositComponent(){
     ];
     return (
         <div>
-            <h1 data-testid="fixed-deposit-heading">Could not paste</h1>
+            <h1 data-testid="fixed-deposit-heading">Your Fixed Deposits</h1>
             <table data-testid="fixed-deposit-table" border="1">
                 <thead>
                     <tr>

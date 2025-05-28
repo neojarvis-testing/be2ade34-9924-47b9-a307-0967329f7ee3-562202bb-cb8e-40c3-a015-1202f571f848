@@ -33,7 +33,7 @@ function AccountForm(){
         };
         return(
             <div>
-                <h2 data-testid="account-form-heading">Open New Account</h2>
+                <h2 data-testid="account-form-heading">New Account</h2>
                 <form onSubmit={handleSubmit} noValidate>
                     <div>
                         <label>Holder Name:
