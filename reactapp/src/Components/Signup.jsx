@@ -7,12 +7,17 @@ function Signup(){
     const[formData,setFormData]=useState({
         name: '',
         email:'',
+        mobile:'',
         password:'',
         confirmPassword: '',
+        role:''
     });
 
     const [errors,setErrors]=useState({});
     const navigate=useNavigate();
+    const emailRegex= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const mobileRegex=/^\d{10}$/;
+
     const handleChange=(e)=>{
         setFormData({ ...formData,[e.target.name]:e.target.value});
         setErrors({ ...errors,[e.target.name]:''});
@@ -21,16 +26,20 @@ function Signup(){
     const handleSubmit =async(e)=>{
         e.preventDefault();
         let errs={};
+
+       
         if(!formData.name)errs.name= 'Name is required';
         if(!formData.email) errs.email='Email is required';
+        else if (!emailRegex.test(formData.email))errs.email='Invalid email format';
+        if(!formData.mobile)errs.mobile='Mobile number is required';
+        else if(mobileRegex.test(formData.mobile))errs.mobile='Mobile number must be exactly 10 digits';
         if(!formData.password) errs.password='Password is required';
+        else if (formData.password.length<6)errs.password='Password must be atleast 6 characters';
         if(!formData.confirmPassword) errs.confirmPassword='Confirm Password is required';
-        if(formData.password &&
-            formData.confirmPassword &&
-            formData.password !== formData.confirmPassword ) {
-            errs.confirmPassword='Passwords do not match';
+        else if (formData.password!==formData.confirmPassword)errs.confirmPassword='Passwords do not match';
 
-        }
+        if(!formData.role)errs.role='Role is required';
+        
         setErrors(errs);
         if(Object.keys(errs).length>0){
             
@@ -40,16 +49,18 @@ function Signup(){
             await api.post('/auth/signup',{
                 name: formData.name,
                 email:formData.email,
+                mobile:formData.mobile,
                 password: formData.password,
+                role: formData.role
             });
             navigate('/login');
         }catch(err){
-            alert('Signup failed. Try again.');
+            alert('Something went wrong. Please try with different data');
         }
     };
     return (
         <div>
-            <h2>Signup</h2>
+            <h2 data-testid="signup-heading">Signup</h2>
             <form onSubmit={handleSubmit} noValidate>
                 <input 
                 type="text"
@@ -59,9 +70,7 @@ function Signup(){
                 onChange={handleChange}
                 data-testid="name-input"
                 />
-                {errors.name && <div data-testid="name-error" style={{color: 'red'}}>{errors.name}</div>}
-                <br/>
-
+               <p role="alert" data-testid="name-error">{errors.name}</p>
             <input
             type="email"
             name="email"
@@ -70,8 +79,17 @@ function Signup(){
             onChange={handleChange}
             data-testid="email-input"
             />
-           {errors.email && <div data-testid="email-error" style={{color: 'red'}}>{errors.email}</div>}
+          <p role="alert" data-testid="email-error">{errors.email}</p>
 
+           <input
+            type="text"
+            name="mobile"
+            placeholder="Mobile Number"
+            value={formData.mobile}
+            onChange={handleChange}
+            data-testid="mobile-input"
+            />
+           <p role="alert" data-testid="mobile-error">{errors.mobile}</p>
             <input
             type="password"
             name="password"
@@ -81,7 +99,7 @@ function Signup(){
             data-testid="password-input"
             />
 
-           {errors.password && <div data-testid="password-error" style={{color: 'red'}}>{errors.password}</div>}
+<p role="alert" data-testid="password-error">{errors.password}</p>
 
             <input
             type="password"
@@ -91,9 +109,21 @@ function Signup(){
             onChange={handleChange}
             data-testid="confirmPassword-input"
             />
-            {errors.confirmPassword && <div data-testid="confirmPassword-error" style={{color: 'red'}}>{errors.confirmPassword}</div>}
+            <p role="alert" data-testid="confirmPassword-error">{errors.confirmPassword}</p>
 
-            <button type ="submit">Signup</button>
+            <select 
+            name="role"
+            value={formData.role}
+            onChange={handleChange}
+            data-testid="role-select">
+                <option value="">Select Role</option>
+                <option value="Customer">Customer</option>
+                <option value="Teller">Teller</option>
+                <option value="Manager">Manager</option>
+
+            </select>
+            <p role="alert" data-testid="role-error">{errors.role}</p>
+            <button type ="submit" data-testid="submit-button">Signup</button>
             </form>
         </div>
     );

@@ -31,7 +31,7 @@ function OpenRDForm(){
         };
         return(
             <div>
-                <h2 dtata-testid="open-rd-form-heading">open Recurring Deposit</h2>
+                <h2 data-testid="open-rd-form-heading">Open Recurring Deposit</h2>
                 <form onSubmit={handleSubmit}noValidate>
                     <div>
                         <label>Monthly Deposit:</label>

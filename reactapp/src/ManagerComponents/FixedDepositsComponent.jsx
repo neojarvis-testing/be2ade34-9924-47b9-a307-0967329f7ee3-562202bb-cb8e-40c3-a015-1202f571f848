@@ -8,7 +8,7 @@ function FixedDepositComponent(){
     ];
     return (
         <div>
-            <h1 data-testid="fixed-deposit-heading">Fixed Deposit Details</h1>
+            <h1 data-testid="fixed-deposit-heading">Your Fixed Deposits</h1>
             <table data-testid="fixed-deposit-table" border="1">
                 <thead>
                     <tr>
@@ -19,7 +19,7 @@ function FixedDepositComponent(){
                     </tr>
                 </thead>
                 <tbody>
-                    {fixedDeposists.map((fd)=>(
+                    {fixedDeposits.map((fd)=>(
                         <tr key={fd.id}>
                             <td>{fd.id}</td>
                             <td>{fd.duration}</td>
