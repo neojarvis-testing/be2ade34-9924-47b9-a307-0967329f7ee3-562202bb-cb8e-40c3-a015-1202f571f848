@@ -8,7 +8,6 @@ function OpenRDForm(){
     });
     const handleChange=(e)=>{
         setFormData({ ...formData,[e.target.name]: e.target.value});
-
     };
     const validate=()=>{
         const newErrors={};

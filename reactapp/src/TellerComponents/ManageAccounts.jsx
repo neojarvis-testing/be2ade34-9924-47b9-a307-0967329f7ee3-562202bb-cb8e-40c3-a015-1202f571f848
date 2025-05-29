@@ -9,4 +9,5 @@ function ManageAccounts(){
         </div>
     );
 }
+
 export default ManageAccounts;

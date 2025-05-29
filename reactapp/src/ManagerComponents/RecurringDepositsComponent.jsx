@@ -1,5 +1,4 @@
 import React from "react";
-
 function RecurringDepositComponent(){
     const recurringDeposits=[
         {id:1,month:"January",amount:1000},

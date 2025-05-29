@@ -6,7 +6,7 @@ function App(){
         <Router>
             <Routes>
              
-                <Route path="/" element ={<div>wlemome!</div>}/>
+                <Route path="/" element ={<div>welcome!</div>}/>
             </Routes>
         </Router>
     );

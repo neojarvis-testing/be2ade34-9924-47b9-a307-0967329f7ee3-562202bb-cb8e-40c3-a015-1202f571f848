@@ -1,6 +1,5 @@
 import React, { useEffect,useState } from "react";
 import  api from '../apiConfig';
-
 function ViewAllAccountsComponent(){
     const[accounts,setAccounts]=useState([]);
     useEffect(()=>{

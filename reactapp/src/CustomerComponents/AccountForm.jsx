@@ -4,7 +4,6 @@ function AccountForm(){
     const[formData,setFormData]=useState({
         holderName:"",
         initialDeposit:""
-
     });
     const[errors,setErrors]=useState({});
     const handleChange=(e)=>{

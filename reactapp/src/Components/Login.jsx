@@ -6,7 +6,6 @@ function Login(){
     const [password,setPassword]=useState('');
     const [errors,setErrors]=useState({});
     const navigate=useNavigate();
-
     const handleLogin=async(e)=>{
         e.preventDefault();
         let errs={};

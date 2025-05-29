@@ -6,6 +6,7 @@ function RecurringDepositComponent(){
         {id:2,month:"February",amount:1000},
         {id:3,month:"March",amount:1000},
     ];
+    
     return(
         <div>
             <h1 data-testid="recurring-deposit-heading">Your Recurring Deposits</h1>

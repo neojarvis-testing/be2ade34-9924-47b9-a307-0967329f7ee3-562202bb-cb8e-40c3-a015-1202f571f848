@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.examly.apigateway.ApigatewayApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 40, Failures: 37, Errors: 3, Skipped: 0, Time elapsed: 3.341 s <<< FAILURE! - in com.examly.apigateway.ApigatewayApplicationTests
-com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterCustomer  Time elapsed: 0.484 s  <<< FAILURE!
+Tests run: 40, Failures: 37, Errors: 3, Skipped: 0, Time elapsed: 3.525 s <<< FAILURE! - in com.examly.apigateway.ApigatewayApplicationTests
+com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterCustomer  Time elapsed: 0.509 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -83,7 +83,7 @@ org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_F
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterTeller  Time elapsed: 0.011 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterTeller  Time elapsed: 0.012 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -164,7 +164,7 @@ org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_F
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterManager  Time elapsed: 0.011 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterManager  Time elapsed: 0.01 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -245,7 +245,7 @@ org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_F
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginCustomer  Time elapsed: 0.019 s  <<< ERROR!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginCustomer  Time elapsed: 0.016 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.JsonNode.asText()" because the return value of "com.fasterxml.jackson.databind.JsonNode.get(String)" is null
 	at com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginCustomer(ApigatewayApplicationTests.java:148)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -395,7 +395,7 @@ java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.Js
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginManager  Time elapsed: 0.009 s  <<< ERROR!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginManager  Time elapsed: 0.01 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.JsonNode.asText()" because the return value of "com.fasterxml.jackson.databind.JsonNode.get(String)" is null
 	at com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginManager(ApigatewayApplicationTests.java:189)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -630,7 +630,7 @@ org.opentest4j.AssertionFailedError: Teller token should not be null ==> expecte
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddAccount_AsManager  Time elapsed: 0.003 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddAccount_AsManager  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Manager token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1590,7 +1590,7 @@ org.opentest4j.AssertionFailedError: Customer token should not be null ==> expec
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testCreateRecurringDeposit_AsTeller  Time elapsed: 0.003 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testCreateRecurringDeposit_AsTeller  Time elapsed: 0.001 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Teller token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1830,7 +1830,7 @@ org.opentest4j.AssertionFailedError: Manager token should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetRecurringDeposit_AsTeller  Time elapsed: 0.002 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetRecurringDeposit_AsTeller  Time elapsed: 0.001 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Teller token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1910,7 +1910,7 @@ org.opentest4j.AssertionFailedError: Teller token should not be null ==> expecte
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetRecurringDeposit_AsCustomer  Time elapsed: 0.002 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetRecurringDeposit_AsCustomer  Time elapsed: 0.01 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Customer token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1990,7 +1990,7 @@ org.opentest4j.AssertionFailedError: Customer token should not be null ==> expec
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testCreateFixedDeposit_AsCustomer  Time elapsed: 0.003 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testCreateFixedDeposit_AsCustomer  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Customer token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2151,7 +2151,7 @@ org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testCreateFixedDeposit_AsTeller  Time elapsed: 0.009 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testCreateFixedDeposit_AsTeller  Time elapsed: 0.014 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2394,7 +2394,7 @@ org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFixedDeposit_AsCustomer  Time elapsed: 0.007 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFixedDeposit_AsCustomer  Time elapsed: 0.01 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2556,7 +2556,7 @@ org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFixedDepositByUser_AsManager  Time elapsed: 0.009 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFixedDepositByUser_AsManager  Time elapsed: 0.008 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2637,7 +2637,7 @@ org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFixedDepositByUser_AsTeller  Time elapsed: 0.009 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFixedDepositByUser_AsTeller  Time elapsed: 0.029 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2799,7 +2799,7 @@ org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetRecurringDepositByUser_AsManager  Time elapsed: 0.008 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetRecurringDepositByUser_AsManager  Time elapsed: 0.009 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2880,7 +2880,7 @@ org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetRecurringDepositByUser_AsTeller  Time elapsed: 0.008 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetRecurringDepositByUser_AsTeller  Time elapsed: 0.009 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2961,7 +2961,7 @@ org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testInvalidCredentialsLoginCustomer  Time elapsed: 0.028 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testInvalidCredentialsLoginCustomer  Time elapsed: 0.008 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -3123,7 +3123,7 @@ org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testInvalidCredentialsLoginManager  Time elapsed: 0.009 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testInvalidCredentialsLoginManager  Time elapsed: 0.008 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)

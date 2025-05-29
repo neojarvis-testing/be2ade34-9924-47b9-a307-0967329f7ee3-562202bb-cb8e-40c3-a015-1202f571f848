@@ -5,6 +5,7 @@ function TransactionHistoryComponent(){
         {id:2, date:"2024-05-03", type:"Withdrawal", amount:500},
         {id:3, date: "2024-05-03", type:"Transfer", amount:700},
     ];
+   
     return(
         <div>
             <h1 data-testid="transaction-history-heading">Transaction History</h1>

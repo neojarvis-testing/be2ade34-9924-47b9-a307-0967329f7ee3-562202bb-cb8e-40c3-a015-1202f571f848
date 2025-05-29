@@ -3,8 +3,7 @@ function FixedDepositComponent(){
     const fixedDeposits=[
         {id:1,duration:"1 Year",amount:10000},
         {id:2,duration:"2 Years",amount:20000},
-        {id:3,duration:"3 Years",amount:20000},
-        
+        {id:3,duration:"3 Years",amount:20000},  
     ];
     return (
         <div>
